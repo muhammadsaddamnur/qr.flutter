@@ -21,7 +21,7 @@ class QrImageView extends StatefulWidget {
   /// using the default options).
   QrImageView({
     required String data,
-    super.key,
+    this.key,
     this.size,
     this.padding = const EdgeInsets.all(10.0),
     this.backgroundColor = Colors.transparent,
@@ -55,7 +55,7 @@ class QrImageView extends StatefulWidget {
   /// using the default options).
   QrImageView.withQr({
     required QrCode qr,
-    super.key,
+    this.key,
     this.size,
     this.padding = const EdgeInsets.all(10.0),
     this.backgroundColor = Colors.transparent,
@@ -84,6 +84,7 @@ class QrImageView extends StatefulWidget {
         ),
         _data = null,
         _qrCode = qr;
+  final Key? key;
 
   // The data passed to the widget
   final String? _data;
